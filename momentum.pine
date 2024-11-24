@@ -1,0 +1,5 @@
+//@version=5
+indicator(title="Momentum", shorttitle="Mom", timeframe="", timeframe_gaps=true)
+momentum_length = input.int(10, minval=1, title="Momentum Length") // Renamed input variable
+mom = close - close[momentum_length] // Used the updated variable name
+plot(mom, color=#2962FF, title="MOM")
