@@ -1,0 +1,7 @@
+//@version=5
+indicator(title="Parabolic SAR", shorttitle="PSAR", overlay=true)
+start = input(0.02, "PSAR Start")
+increment = input(0.02, "PSAR Increment")
+maximum = input(0.2, "PSAR Max")
+out = ta.sar(start, increment, maximum)
+plot(out, "ParabolicSAR", style=plot.style_cross, color=#2962FF)
